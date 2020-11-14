@@ -1,3 +1,4 @@
+import 'package:MegaHackFive/app/theme/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
@@ -8,10 +9,8 @@ class AppWidget extends StatelessWidget {
       navigatorKey: Modular.navigatorKey,
       debugShowCheckedModeBanner: false,
       title: 'Hackathon',
-      theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
-      ),
-      initialRoute: '/',
+      theme: defaultTheme(),
+      initialRoute: '/login',
       onGenerateRoute: Modular.generateRoute,
     );
   }
