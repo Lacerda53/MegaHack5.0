@@ -12,6 +12,7 @@ const greenbg = const Color(0xFFE5F4E9);
 const purplebg = const Color(0xFFA359FF);
 const purpleligh = const Color(0xFFEEE1FF);
 const graycolor = const Color(0xFFEEEEEE);
+const linecolor = const Color(0xFFD3D3D3);
 
 
 ThemeData defaultTheme() {

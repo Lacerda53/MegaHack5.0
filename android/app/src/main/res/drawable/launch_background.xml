@@ -7,9 +7,9 @@
     <TextView android:gravity="center" android:text="LOGO" android:textColor="#fff" android:textSize="30dp" />
 
     <!-- You can insert your own image assets here -->
-    <!-- <item>
+    <item>
         <bitmap
             android:gravity="center"
-            android:src="@mipmap/ic_launcher" />
-    </item> -->
+            android:src="@drawable/splash" />
+    </item>
 </layer-list>

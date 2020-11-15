@@ -1,3 +1,4 @@
+import 'package:MegaHackFive/app/modules/dashboard/dashboard_page.dart';
 import 'package:MegaHackFive/app/theme/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -18,7 +19,9 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
   Widget build(BuildContext context) {
     int _currentIndex = 0;
 
-    final List<Widget> _children = [];
+    final List<Widget> _children = [
+      DashboardPage()
+    ];
 
     return Scaffold(
       appBar: AppBar(

@@ -6,7 +6,8 @@ class InputWidget extends StatefulWidget {
   final String place;
   final TextInputType type;
   final bool obscure;
-  InputWidget({Key key, this.label, this.place, this.type, this.obscure = false});
+  final double padding;
+  InputWidget({Key key, this.label, this.place, this.type, this.obscure = false, this.padding = 15});
   @override
   _InputWidgetState createState() => _InputWidgetState();
 }
@@ -19,7 +20,7 @@ class _InputWidgetState extends State<InputWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: EdgeInsets.all(15),
+            padding: EdgeInsets.all(widget.padding),
             child: Text(
               widget.label,
               style: TextStyle(
@@ -29,8 +30,12 @@ class _InputWidgetState extends State<InputWidget> {
               ),
             ),
           ),
+          widget.padding ==0?
+          SizedBox(height: 10,)
+          :
+          Container(),
           Container(
-            margin: EdgeInsets.only(left: 15, right: 15),
+            margin: EdgeInsets.only(left: widget.padding, right: widget.padding),
             child: TextField(
               obscureText: widget.obscure,
               keyboardType: widget.type,

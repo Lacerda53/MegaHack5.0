@@ -3,9 +3,9 @@ import 'dart:ui';
 import 'package:MegaHackFive/app/theme/styles.dart';
 import 'package:MegaHackFive/app/widgets/AppBarWidget/appBar_widget.dart';
 import 'package:MegaHackFive/app/widgets/Button_Main/button_widget.dart';
+import 'package:MegaHackFive/app/widgets/CardWin/cardWin_widget.dart';
 import 'package:MegaHackFive/app/widgets/ProgressBar/progressBar_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class MyTrailPage extends StatefulWidget {
   @override
@@ -78,7 +78,11 @@ class _MyTrailPageState extends State<MyTrailPage> {
             SizedBox(
               height: 30,
             ),
-            Center(child: ProgressBarWidget()),
+            Center(
+                child: ProgressBarWidget(
+              width: width / 1.1,
+              progress: width / 4.5,
+            )),
             SizedBox(
               height: 20,
             ),
@@ -203,103 +207,8 @@ class _MyTrailPageState extends State<MyTrailPage> {
                 ],
               ),
             ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              padding: EdgeInsets.all(15),
-              child: Text(
-                "Recompensas ao alcançar próximo nível",
-                style: TextStyle(
-                    color: darkColor,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24),
-              ),
-            ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(left: 15),
-                    width: width / 1.7,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        color: graycolor,
-                        borderRadius: BorderRadius.all(Radius.circular(15))),
-                    child: Row(
-                      children: [
-                        SizedBox(
-                          width: 15,
-                        ),
-                        SvgPicture.asset("assets/illustrations/trophy.svg"),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Stack(
-                          children: <Widget>[
-                            Center(child: Text('Hello FLUTTTTER')),
-                            Positioned(
-                              top: 0,
-                              left: 0,
-                              width: 100,
-                              height: 200,
-                              child: BackdropFilter(
-                                filter: ImageFilter.blur(
-                                  sigmaX: 3,
-                                  sigmaY: 3,
-                                ),
-                                child: Container(
-                                  color: Colors.black.withOpacity(0),
-                                ),
-                              ),
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(left: 15),
-                    width: width / 1.7,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        color: graycolor,
-                        borderRadius: BorderRadius.all(Radius.circular(15))),
-                    child: Row(
-                      children: [
-                        SizedBox(
-                          width: 15,
-                        ),
-                        SvgPicture.asset("assets/illustrations/trophy.svg"),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Stack(
-                          children: <Widget>[
-                            Center(child: Text('Hello FLUTTTTER')),
-                            Positioned(
-                              top: 0,
-                              left: 0,
-                              width: 100,
-                              height: 200,
-                              child: BackdropFilter(
-                                filter: ImageFilter.blur(
-                                  sigmaX: 3,
-                                  sigmaY: 3,
-                                ),
-                                child: Container(
-                                  color: Colors.black.withOpacity(0),
-                                ),
-                              ),
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+            CardWinWidget(
+              title: "Recompensas ao alcançar próximo nível",
             ),
             SizedBox(
               height: 40,

@@ -1,4 +1,5 @@
 import 'package:MegaHackFive/app/modules/congratulations/congratulations_module.dart';
+import 'package:MegaHackFive/app/modules/dashboard/dashboard_module.dart';
 import 'package:MegaHackFive/app/modules/myTrail/myTrail_module.dart';
 import 'package:MegaHackFive/app/modules/subConfigTrail/subConfigTrail_module.dart';
 import 'app_controller.dart';
@@ -31,6 +32,7 @@ class AppModule extends MainModule {
         ModularRouter('/myTrail', module: MyTrailModule()),
         ModularRouter('/subConfigTrail', module: SubConfigTrailModule()),
         ModularRouter('/congratulations', module: CongratulationsModule()),
+        ModularRouter('/dashboard', module: DashboardModule()),
       ];
 
   @override

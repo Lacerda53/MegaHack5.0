@@ -2,6 +2,9 @@ import 'package:MegaHackFive/app/theme/styles.dart';
 import 'package:flutter/material.dart';
 
 class ProgressBarWidget extends StatefulWidget {
+  final double width;
+  final double progress;
+  ProgressBarWidget({this.width, this.progress});
   @override
   _ProgressBarWidgetState createState() => _ProgressBarWidgetState();
 }
@@ -9,7 +12,6 @@ class ProgressBarWidget extends StatefulWidget {
 class _ProgressBarWidgetState extends State<ProgressBarWidget> {
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
     return Stack(
       children: [
         Container(
@@ -18,7 +20,7 @@ class _ProgressBarWidgetState extends State<ProgressBarWidget> {
             color: purpleligh,
             borderRadius: BorderRadius.all(Radius.circular(10)),
           ),
-          width: width / 1.1,
+          width: widget.width,
           height: 10,
         ),
         Positioned(
@@ -27,7 +29,7 @@ class _ProgressBarWidgetState extends State<ProgressBarWidget> {
               color: purplebg,
               borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
-            width: width / 4.5,
+            width: widget.progress,
             height: 15,
           ),
         )

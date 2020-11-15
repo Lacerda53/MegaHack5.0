@@ -1,5 +1,9 @@
 import 'package:MegaHackFive/app/theme/styles.dart';
+import 'package:MegaHackFive/app/widgets/Button_Main/button_widget.dart';
+import 'package:MegaHackFive/app/widgets/CardWin/cardWin_widget.dart';
+import 'package:MegaHackFive/app/widgets/Input/input_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class CongratulationsPage extends StatefulWidget {
   @override
@@ -7,6 +11,7 @@ class CongratulationsPage extends StatefulWidget {
 }
 
 class _CongratulationsPageState extends State<CongratulationsPage> {
+  bool witchStatus = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,40 +98,108 @@ class _CongratulationsPageState extends State<CongratulationsPage> {
                 SizedBox(
                   height: 10,
                 ),
-                Stack(
-                  children: [
-                    Container(
-                      height: MediaQuery.of(context).size.height / 2.5,
-                      color: greenbg,
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 20),
-                      padding: EdgeInsets.all(15),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Algum imprevisto?",
-                            style: TextStyle(
-                                color: darkColor,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            "Sem problemas! Veja as medidas que\nvocê pode tomar",
-                            style: TextStyle(
-                              color: darkColor,
-                              fontSize: 16
+                Container(
+                  color: greenbg,
+                  child: Stack(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(top: 20),
+                        padding: EdgeInsets.all(15),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Algum imprevisto?",
+                              style: TextStyle(
+                                  color: darkColor,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
                             ),
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                )
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              "Sem problemas! Veja as medidas que\nvocê pode tomar",
+                              style: TextStyle(color: darkColor, fontSize: 16),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  "Adiar viagem",
+                                  style: TextStyle(
+                                      color: darkColor,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  width: 25,
+                                ),
+                                LiteRollingSwitch(
+                                  value: witchStatus,
+                                  textOn: 'Sim',
+                                  textOff: 'Não',
+                                  colorOn: primaryColor,
+                                  colorOff: Colors.redAccent[700],
+                                  iconOff: Icons.close,
+                                  textSize: 16.0,
+                                  onChanged: (bool witchStatus) {
+                                    print("mudou");
+                                  },
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 30,
+                            ),
+                            InputWidget(
+                              label: "Qual a nova data da viagem?",
+                              place: "dia/mês/ano",
+                              type: TextInputType.datetime,
+                              padding: 0,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Center(
+                              child: FlatButton(
+                                onPressed: () {},
+                                child: Text("Pausar trilha"),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                ButtonMainWidget(
+                  nome: "Quero pausar minha trilha",
+                  color: Color(0xFFEA4335),
+                  width: MediaQuery.of(context).size.width / 1.7,
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                CardWinWidget(
+                  title: "Recompensas adquiridas",
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                ButtonMainWidget(
+                  nome: "Prosseguir para próximo checkpoint",
+                  to: "/dashboard",
+                  width: MediaQuery.of(context).size.width / 1.1,
+                ),
+                SizedBox(
+                  height: 40,
+                ),
               ],
             ),
           ),
