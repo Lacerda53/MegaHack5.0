@@ -194,7 +194,7 @@ class _CongratulationsPageState extends State<CongratulationsPage> {
                 ),
                 ButtonMainWidget(
                   nome: "Prosseguir para próximo checkpoint",
-                  to: "/dashboard",
+                  to: "/home",
                   width: MediaQuery.of(context).size.width / 1.1,
                 ),
                 SizedBox(

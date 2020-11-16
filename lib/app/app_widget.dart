@@ -10,7 +10,7 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Hackathon',
       theme: defaultTheme(),
-      initialRoute: '/home',
+      initialRoute: '/login',
       onGenerateRoute: Modular.generateRoute,
     );
   }

@@ -115,7 +115,6 @@ class _SubConfigTrailPageState extends State<SubConfigTrailPage> {
         padding: EdgeInsets.only(left: 30),
         child: ButtonArrowWidget(
           bleft: true,
-          left: "/configTrail",
           bright: true,
           right: "/finalTrail",
         ),

@@ -81,7 +81,6 @@ class _DetailsTrailPageState extends State<DetailsTrailPage> {
         padding: EdgeInsets.only(left: 30),
         child: ButtonArrowWidget(
           bleft: true,
-          left: "/listTrail",
         ),
       ),
     );

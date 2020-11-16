@@ -1,6 +1,9 @@
 import 'package:MegaHackFive/app/modules/congratulations/congratulations_module.dart';
 import 'package:MegaHackFive/app/modules/dashboard/dashboard_module.dart';
+import 'package:MegaHackFive/app/modules/invest/invest_module.dart';
+import 'package:MegaHackFive/app/modules/investValue/investValue_module.dart';
 import 'package:MegaHackFive/app/modules/myTrail/myTrail_module.dart';
+import 'package:MegaHackFive/app/modules/profile/profile_module.dart';
 import 'package:MegaHackFive/app/modules/subConfigTrail/subConfigTrail_module.dart';
 import 'app_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -33,6 +36,9 @@ class AppModule extends MainModule {
         ModularRouter('/subConfigTrail', module: SubConfigTrailModule()),
         ModularRouter('/congratulations', module: CongratulationsModule()),
         ModularRouter('/dashboard', module: DashboardModule()),
+        ModularRouter('/profile', module: ProfileModule()),
+        ModularRouter('/invest', module: InvestModule()),
+        ModularRouter('/investValue', module: InvestValueModule()),
       ];
 
   @override

@@ -94,7 +94,6 @@ class _FinalTrailPageState extends State<FinalTrailPage> {
         padding: EdgeInsets.only(left: 30),
         child: ButtonArrowWidget(
           bleft: true,
-          left: "/subConfigTrail",
         ),
       ),
     );

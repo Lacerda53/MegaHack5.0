@@ -2,11 +2,10 @@ import 'package:MegaHackFive/app/theme/styles.dart';
 import 'package:flutter/material.dart';
 
 class ButtonArrowWidget extends StatefulWidget {
-  final String left;
   final String right;
   final bool bleft;
   final bool bright;
-  ButtonArrowWidget({this.left ="/", this.right="/", this.bleft=false, this.bright=false});
+  ButtonArrowWidget({this.right="/", this.bleft=false, this.bright=false});
   @override
   _ButtonArrowWidgetState createState() => _ButtonArrowWidgetState();
 }
@@ -22,7 +21,7 @@ class _ButtonArrowWidgetState extends State<ButtonArrowWidget> {
           child: FloatingActionButton(
             mini: true,
             heroTag: "btn1",
-            onPressed: () => Navigator.popAndPushNamed(context, widget.left),
+            onPressed: () => Navigator.pop(context),
             backgroundColor: secundaryColor,
             child: Icon(Icons.arrow_back_outlined),
           ),

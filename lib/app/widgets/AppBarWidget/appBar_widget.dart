@@ -5,7 +5,7 @@ class AppBarWidget extends StatefulWidget {
   final String title;
   final bool back;
   final String toback;
-  AppBarWidget({this.title = "Title", this.toback = "", this.back = false});
+  AppBarWidget({this.title = "Title", this.toback, this.back = false});
   @override
   _AppBarWidgetState createState() => _AppBarWidgetState();
 }

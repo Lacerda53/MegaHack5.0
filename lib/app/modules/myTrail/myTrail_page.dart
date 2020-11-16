@@ -23,7 +23,7 @@ class _MyTrailPageState extends State<MyTrailPage> {
           child: AppBarWidget(
             title: "Trilhas",
             back: true,
-            toback: "/dashboard",
+            toback: "/home",
           ),
         ),
       ),
