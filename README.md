@@ -7,4 +7,4 @@ Tudo de maneira transparente. A trilha terá checkpoints e para motivar o usuár
 
 Conforme o usuário for atingindo os checkpoints, receberá recompensas como isenção de taxas, cursos de educação financeira ou descontos em parceiros da Órama. Além disso, o usuário receberá cashbacks pela indicação de amigos, incentivando mais pessoas a conquistarem seus objetivos.
 
-<a href="https://youtu.be/hNGQahTpyzs%22%3E%22%3EPITCH">PITCH </a>
+<a href="https://www.youtube.com/watch?v=hNGQahTpyzs&feature=youtu.be">PITCH </a>
