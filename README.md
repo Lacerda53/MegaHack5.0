@@ -1,4 +1,4 @@
-<h3>Sobre o aplicativo Jornada Órama</h3>
+<h3 style="color: #00BB5D";>Sobre o aplicativo Jornada Órama</h3>
 
 A Jornada Órama tem como missão facilitar e incentivar as pessoas a investirem com base em seus objetivos, seja realizar uma viagem, comprar um carro ou pagar seus estudos, por exemplo. 
 
