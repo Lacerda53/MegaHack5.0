@@ -17,8 +17,8 @@ class _InvestValuePageState extends State<InvestValuePage> {
         child: SafeArea(
           child: AppBarWidget(
             back: true,
-            toback: "/invest",
-            title: "Cashback",
+            toback: "/home",
+            title: "Investir",
           ),
         ),
       ),

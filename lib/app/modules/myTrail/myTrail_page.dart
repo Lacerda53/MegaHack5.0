@@ -118,7 +118,10 @@ class _MyTrailPageState extends State<MyTrailPage> {
             SizedBox(
               height: 30,
             ),
-            Image.asset("assets/illustrations/trail.png"),
+            Image.asset(
+              "assets/illustrations/trail.png",
+              width: MediaQuery.of(context).size.width,
+            ),
             SizedBox(
               height: 30,
             ),
